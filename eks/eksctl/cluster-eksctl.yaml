@@ -1,0 +1,23 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: eks-mais-todos
+  region: us-east-1
+
+vpc:
+  subnets:
+    private:
+      eu-north-1a: { id: subnet-014a25d0be404caa9 }
+      eu-north-1b: { id: subnet-0e5bcb03f32ddf806 }
+
+nodeGroups:
+  - name: ng-mais-todos
+    labels: { role: workers }
+    instanceType: t3.medium
+    desiredCapacity: 2
+    privateNetworking: true
+    iam:
+      withAddonPolicies:
+        imageBuilder: true
+

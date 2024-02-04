@@ -1,0 +1,25 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: metabase-hpa
+  namespace: metabase
+spec:
+  maxReplicas: 5
+  metrics:
+  - resource:
+      name: memory
+      target:
+        averageUtilization: 150
+        type: Utilization
+    type: Resource
+  - resource:
+      name: cpu
+      target:
+        averageUtilization: 150
+        type: Utilization
+    type: Resource
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: metabase-deployment

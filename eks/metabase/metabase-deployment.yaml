@@ -1,0 +1,40 @@
+# Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: metabase-deployment
+  namespace: metabase
+spec:
+  selector:
+    matchLabels:
+      app: metabase
+  template:
+    metadata:
+      labels:
+        app: metabase
+    spec:
+      containers:
+      - name: metabase
+        image: metabase/metabase
+        ports:
+        - containerPort: 3000
+        env:
+        - name: MB_DB_TYPE
+          value: postgres
+        - name: MB_DB_DBNAME
+          value: metabaseappdb
+        - name: MB_DB_PORT
+          value: "5432"
+        - name: MB_DB_USER
+          value: postgres
+        - name: MB_DB_PASS
+          value: Sec123123
+        - name: MB_DB_HOST
+          value: metabase-postgres.ctykc4qiu4bb.us-east-1.rds.amazonaws.com
+        resources:
+          limits:
+            memory: 2024Mi
+            cpu: 3000m
+          requests:
+            memory: 512Mi
+            cpu: 1000m

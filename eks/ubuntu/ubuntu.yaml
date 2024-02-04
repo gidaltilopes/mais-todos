@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-bastion
+  labels:
+    app: ubuntu-bastion
+spec:
+  containers:
+  - name: ubuntu-bastion
+    image: ubuntu:latest
+    command: ["/bin/sh","-c"]
+    args: ["apt update; apt install postgresql-client -y && /bin/sleep 3650d"]
+    #command: ["/bin/sleep", "3650d"]
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always
