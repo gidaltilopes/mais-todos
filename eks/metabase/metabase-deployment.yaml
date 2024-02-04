@@ -33,7 +33,7 @@ spec:
           value: metabase-postgres.ctykc4qiu4bb.us-east-1.rds.amazonaws.com
         resources:
           limits:
-            memory: 2024Mi
+            memory: 3024Mi
             cpu: 3000m
           requests:
             memory: 512Mi
