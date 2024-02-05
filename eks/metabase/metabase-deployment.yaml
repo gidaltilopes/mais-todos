@@ -22,7 +22,7 @@ spec:
         - name: MB_DB_TYPE
           value: postgres
         - name: MB_DB_DBNAME
-          value: metabaseappdb
+          value: metabase
         - name: MB_DB_PORT
           value: "5432"
         - name: MB_DB_USER
@@ -33,8 +33,8 @@ spec:
           value: metabase-postgres.ctykc4qiu4bb.us-east-1.rds.amazonaws.com
         resources:
           limits:
-            memory: 3024Mi
-            cpu: 3000m
+            memory: 2048Mi
+            cpu: 2000m
           requests:
-            memory: 512Mi
-            cpu: 1000m
+            memory: 1024Mi
+            cpu: 200m

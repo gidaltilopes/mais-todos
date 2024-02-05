@@ -9,16 +9,16 @@ spec:
   - resource:
       name: memory
       target:
-        averageUtilization: 150
+        averageUtilization: 90
         type: Utilization
     type: Resource
   - resource:
       name: cpu
       target:
-        averageUtilization: 150
+        averageUtilization: 90
         type: Utilization
     type: Resource
-  minReplicas: 1
+  minReplicas: 2
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
