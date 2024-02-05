@@ -28,7 +28,10 @@ spec:
         - name: MB_DB_USER
           value: postgres
         - name: MB_DB_PASS
-          value: Sec123123
+          valueFrom:
+            secretKeyRef:
+              name: postgres-pass
+              key: senha-do-banco
         - name: MB_DB_HOST
           value: metabase-postgres.ctykc4qiu4bb.us-east-1.rds.amazonaws.com
         resources:
@@ -37,4 +40,4 @@ spec:
             cpu: 2000m
           requests:
             memory: 1024Mi
-            cpu: 200m
+            cpu: 1000m
