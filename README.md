@@ -3,7 +3,7 @@ Creating a scalable horizontal business environment for Metabase, enabling the i
 
 
 ### The Metabase Service
-<img src="https://assets.stickpng.com/images/62a9cfba8ff6441a2952dae3.png" style="width:20%;height:auto;">
+<img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/metabase_logo_icon_168103.png" style="width:20%;height:auto;">
 
 The service is accessible at https://metabase.freedynamicdns.net, utilizing a dynamic DNS service for a user-friendly address.
 <BR>
@@ -26,6 +26,7 @@ The service is accessible at https://metabase.freedynamicdns.net, utilizing a dy
 - Secrets: securely hide the database connection password, ensuring a more robust and secure configuration.
 <img src="https://i.ibb.co/HDSMPzc/kubectl.gif" style="width:80%;height:auto;">
 Figure1 - List resources
+
 
 ***RDS***
 - The Metabase service is configured to persist data in a PostgreSQL database.
