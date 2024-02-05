@@ -24,6 +24,8 @@ The service is accessible at https://metabase.freedynamicdns.net, utilizing a dy
 - Service: forward traffic from port 80 to the deployment on port 3000.
 - Ingress: traffic from metabase.freedynamicdns.net and forward it to port 80 of svc when the path is '/'. This enables external access to the service.
 - Secrets: securely hide the database connection password, ensuring a more robust and secure configuration.
+<img src="https://i.ibb.co/HDSMPzc/kubectl.gif" style="width:80%;height:auto;">
+Figure1 - List resources
 
 ***RDS***
 - The Metabase service is configured to persist data in a PostgreSQL database.
@@ -37,7 +39,7 @@ The service is accessible at https://metabase.freedynamicdns.net, utilizing a dy
 
 <img src="https://i.ibb.co/R2WysZ6/infra.png" style="width:100%;height:auto;">
 
-Figure1 - High-level EKS/RDS SaaS Architecture Concepts
+Figure2 - High-level EKS/RDS SaaS Architecture Concepts
 <BR>
 ### The Pipeline
 
@@ -50,4 +52,4 @@ Figure1 - High-level EKS/RDS SaaS Architecture Concepts
 - The pipeline, triggered on main branch pushes and pull requests, consists of five steps: code checkout, AWS credentials setup, kubeconfig manifest creation, context selection and deployment to the cluster.
 
 <img src="https://i.ibb.co/WV5HvB1/pipeline.png" style="width:100%;height:auto">
-Figure2 - The workflow
+Figure3 - The workflow
