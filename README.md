@@ -14,9 +14,9 @@ The service is accessible at https://metabase.freedynamicdns.net, utilizing a dy
 - Security firewalls control traffic, especially between private and isolated. subnets
 - Spot Instance types t3.medium and c5.large.
 - EC2 Scalability configured to automatically scale based on CPU utilization, reaching 90%.
+- Nodegroup capacity desired 2, minimum: 2, maximum 3.
 #####EKS CLUSTER
 - Created the cluster using eksctl, a command-line tool for simplified EKS cluster management on AWS.
-- Nodegroup capacity desired 2, minimum: 2, maximum 3.
 - HPA: 1 pod min and 5 max, target 90% CPU/MEM utilization.
 - Deployment: port 3000, requests 500 CPU/MEM, limmit 2000 CPU/MEM.
 - Service: forward traffic from port 80 to the deployment on port 3000.
