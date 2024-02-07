@@ -49,6 +49,7 @@ Figure2 - High-level EKS/RDS SaaS Architecture Concepts
 ```docker pull metabase/metabase:latest```
 
 ***GITHUB ACTIONS***
+- https://github.com/gidaltilopes/mais-todos/actions
 - GitHub was utilized for version control, and GitHub Actions was employed for pipeline creation. 
 - The pipeline, triggered on main branch pushes and pull requests, consists of five steps: code checkout, AWS credentials setup, kubeconfig manifest creation, context selection and deployment to the cluster.
 
